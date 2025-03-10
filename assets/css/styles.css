@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #effafa;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 8px;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Increased length */
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.headtag {
+    display: flex;
+    align-items: center;
+    background: #5cc5c7; /* Lighter teal */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.headtag:hover {
+    background: #48a8aa;
+}
+
+.headtag i {
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.headtag i:hover {
+    color: #ff4d4d;
+}
+
+.clear {
+    font-size: 14px;
+    color: #48a8aa;
+    cursor: pointer;
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+.clear:hover {
+    text-decoration: underline;
+}
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    height: 150px;
+}
+.banner {
+    background: linear-gradient(135deg, #5cc5c7 25%, #3c9a9c 75%); /* Gradient similar to the image */
+    height: 100px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+/* Job Listings */
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Job Card */
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.job-card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    border-left: 5px solid #06a; /* Blue border for active state */
+}
+.job-card:active {
+    transform: scale(0.98);
+    border-left: 5px solid #004d4d; /* Darker border when clicked */
+}
+.job-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Company Info */
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+.logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.job-details {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+}
+.job-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.job-info h4 {
+    margin: 0;
+    color: #06a;
+}
+.job-info h2 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.job-meta {
+    font-size: 14px;
+    color: gray;
+}
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tag {
+    display: inline-block;
+    background: #e0f4f4;
+    color: #008080;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.tag:hover {
+    background: #008080;
+    color: white;
+}
+
+.tag:active {
+    background: #004d4d;
+    color: white;
+}
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.new:hover {
+    background-color: #005577;
+}
+
+.featured:hover {
+    background-color: #5a002d;
+}
+.new {
+    background-color: #06a; /* Blue for NEW! */
+}
+
+.featured {
+    background-color: #82004A; /* Dark pink for FEATURED */
+}
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .job-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .tag, .tags span {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

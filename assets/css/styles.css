@@ -228,6 +228,9 @@ body {
     .tags {
         flex-wrap: wrap;
     }
+    .job-header>h4 {
+        white-space: initial;
+    }
 }
 
 @media (max-width: 480px) {
@@ -242,5 +245,8 @@ body {
     .tag, .tags span {
         font-size: 12px;
         padding: 4px 8px;
+    }
+    .job-header>h4 {
+        white-space: initial;
     }
 }
